@@ -14,7 +14,7 @@ function Login({loginHandel}) {
     <>
       <div className="h-screen w-full bg-[#1c1c1c] flex items-center justify-center py-8 px-5">
         <form onSubmit={(e) => submitHandler(e)}>
-          <div className="h-[57vh] w-[26vw] flex flex-col items-center justify-start rounded-4xl border-2 border-emerald-500 text-emerald-700 p-10 ">
+          <div className="h-[57vh] w-[26vw] flex flex-col items-center justify-start rounded-xl border-2 border-emerald-500 text-emerald-700 p-10 ">
             <h2 className="font-bold text-3xl uppercase">Login</h2>
             <div className="mt-3">
               <h3 className="font-semibold text-xl ">Email :</h3>
@@ -23,7 +23,7 @@ function Login({loginHandel}) {
                 onChange={(e) => setemail(e.target.value)}
                 value={email}
                 type="email"
-                className="border-2 rounded-md outline-none px-2  w-[21vw] mt-2 h-[6vh]  placeholder-emerald-600"
+                className="border-3 rounded-md border-emerald-600 text-white outline-none px-2  w-[21vw] mt-2 h-[6vh]  placeholder-emerald-600 font-semibold text-sm"
                 placeholder="Enter Your Email Here"
               />
             </div>
@@ -34,7 +34,7 @@ function Login({loginHandel}) {
                 onChange={(e) => setpassword(e.target.value)}
                 value={password}
                 type="password"
-                className="border-2 rounded-md outline-none px-2  w-[21vw] mt-2 h-[6vh]  placeholder-emerald-600"
+                className="border-3 border-emerald-600 text-white rounded-md outline-none px-2  w-[21vw] mt-2 h-[6vh]  placeholder-emerald-600 font-semibold text-sm"
                 placeholder="Enter Password Here"
               />
             </div>

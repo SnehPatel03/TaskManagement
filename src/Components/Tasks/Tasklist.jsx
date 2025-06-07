@@ -15,13 +15,13 @@ function Tasklist({ data }) {
           return <AcceptTask data={elem} key={index} />
         }
         if (elem.newTask) {
-          return <NewTask key={index} />
+          return <NewTask data={elem} key={index} />
         }
         if (elem.completed) {
-          return <CompleteTask key={index} />
+          return <CompleteTask data={elem} key={index} />
         }
         if (elem.failed) {
-          return <FailedTask key={index} />
+          return <FailedTask data={elem} key={index} />
         }
       })}
     </div>

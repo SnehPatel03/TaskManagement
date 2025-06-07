@@ -1,7 +1,8 @@
 import React from "react";
-import Header from "../../../others/Header";
 import Tasklist from "../Tasks/Tasklist";
 import TaskBar from "../Tasks/taskBar";
+import Header from './../../others/Header'
+
 
 function EmployeeDashboard({ data }) {
   console.log(data);

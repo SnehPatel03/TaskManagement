@@ -14,7 +14,8 @@ function App() {
   useEffect(() => {
     const loggedInuser = localStorage.getItem("userLoggedInData");
 
-    if (loggedInuser) {
+   
+    if (loggedInuser && loggedInuser !== " ") {
       const parsedData = JSON.parse(loggedInuser);
       setuserLoggedInData(parsedData.data);
       setUser(parsedData.role);
