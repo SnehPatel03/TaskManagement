@@ -10,10 +10,10 @@ function FailedTask({data}) {
           <h4 className="text-sm text-white font-bold"> {data.taskDate}</h4>
         </div>
         <div className=" px-6">
-          <h2 className="text-xl font-semibold text-white">
+          <h2 className="text-3xl font-bold text-white">
            {data.taskTitle}
           </h2>
-          <h4 className="text-sm text-white font-semibold mt-5">
+          <h4 className="text-2sm text-white font-semibold mt-5">
           {data.taskDescription}
           </h4>
         </div>

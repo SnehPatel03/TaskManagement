@@ -219,7 +219,7 @@ export const getlocalStorage = () => {
   const employeeData = JSON.parse(localStorage.getItem("employees"));
   const adminData = JSON.parse(localStorage.getItem("admin"));
   
-  // to see dataaa in console
+// to see dataaa in console
 //   console.log("data", JSON.parse(adminData));
 //   console.log("data", JSON.parse(employeeData));
 
