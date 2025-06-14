@@ -1,38 +1,58 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from 'react';
 import { getlocalStorage } from '../../utils/localStorage';
+import { AuthContext } from '../../Context/AuthProvider';
 
 function CreateTask() {
   const [taskTitle, setTaskTitle] = useState("");
   const [taskDate, setTaskDate] = useState("");
   const [category, setCategory] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
-  const [assign, setAssign] = useState("");
+  const [asignTo, setAsignTo] = useState("");
+  const [newTask, setNewTask] = useState({});
+  const [userData, setUserData] = useContext(AuthContext);
+const submitHandler = (e) => {
+  e.preventDefault();
 
-  const [task, setTask] = useState({})
+  const task = {
+    taskTitle,
+    taskDescription,
+    taskDate,
+    category,
+    active: false,
+    newTask: true,
+    failed: false,
+    completed: false,
+  };
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-    setTask({taskTitle,taskDate,category,taskDescription,assign,
-    active:false,newTask:true,failed:false,completed:false,})
+  const updatedUserData = {
+    ...userData,
+    employeeData: userData.employeeData.map((emp) => {
+      if (emp.firstName === asignTo) {
+        return {
+          ...emp,
+          tasks: [...emp.tasks, task],
+          taskCounts: {
+            ...emp.taskCounts,
+            newTask: emp.taskCounts.newTask + 1,
+          },
+        };
+      }
+      return emp;
+    }),
+  };
 
-    const data = getlocalStorage('employeeData')
-    console.log(data);
+  setUserData(updatedUserData);
+  console.log(updatedUserData);
 
-    data.employeeData.forEach(function(elem){
-      if(assign === elem.firstName){
-        elem.tasks.push(task)
-        elem.taskCounts.newTask++;
-      } 
-    })
-localStorage.setItem('employeeData' , JSON.stringify(data))
-    console.log(data);
-    setTaskTitle("");
-    setTaskDate("");
-    setCategory("");
-    setTaskDescription("");
-    setAssign("");
-  }
+  // Clear form
+  setTaskTitle('');
+  setCategory('');
+  setAsignTo('');
+  setTaskDate('');
+  setTaskDescription('');
+};
+
 
   return (
     <form onSubmit={(e) => {
@@ -48,15 +68,15 @@ localStorage.setItem('employeeData' , JSON.stringify(data))
           placeholder='Make Production Report etc....' className='outline-none h-12 p-2 border-2 w-[34vw] mt-5 font-semibold rounded-md' type="text" />
         <h2 className='text-xl font-bold mt-8'>Date</h2>
         <input
-          value={taskDate} 
+          value={taskDate}
           onChange={(e) => {
             setTaskDate(e.target.value);
           }}
           placeholder='Date of Task' className='outline-none h-12 p-2 border-2 w-[34vw] mt-5 font-semibold rounded-md' type="Date" />
         <h2 className='text-xl font-bold mt-8'>Assign To :</h2>
         <input
-          value={assign} onChange={(e) => {
-            setAssign(e.target.value);
+          value={asignTo} onChange={(e) => {
+            setAsignTo(e.target.value);
           }}
           placeholder='Task Assigned to whom' className='outline-none h-12 p-2 border-2 w-[34vw] mt-5 font-semibold rounded-md' type="text" />
         <h2 className='text-xl font-bold mt-8'>Category :</h2>
@@ -74,7 +94,7 @@ localStorage.setItem('employeeData' , JSON.stringify(data))
           }}
           placeholder='Description of Task...' name="description" cols="70" rows="10" className='p-2 border-2 w-[34vw] rounded-md m-5 mt-5 font-semibold' ></textarea>
         <button className='ml-55 mt-17 border-none font-bold rounded-lg h-11 w-30 px-5 
-      bg-[#2EB872] hover:bg-green-600 transition duration-300 ease-in-out'>
+        bg-[#2EB872] hover:bg-green-600 transition duration-300 ease-in-out'>
           <h2 className='text-md font-semibold'>Creat Task</h2>
         </button>
       </div>
