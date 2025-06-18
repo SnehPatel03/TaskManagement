@@ -85,7 +85,7 @@ function Login({ loginHandel }) {
         <div className="text-center max-w-lg">
           <h2 className="text-4xl font-bold text-white mb-4">
             Welcome to<br />
-            <span className="text-gray-200">Employee Portal</span>
+            <span className="text-gray-200">FlowDesks</span>
           </h2>
           <p className="text-gray-300 mb-8 text-lg">
             Manage your tasks and stay productive
