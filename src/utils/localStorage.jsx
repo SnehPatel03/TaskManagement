@@ -5,9 +5,9 @@ const employees = [
         "email": "employee@1.com",
         "password": "123",
         "taskCounts": {
-            "active": 2,
-            "newTask": 0,
-            "completed": 1,
+            "active": 0,
+            "newTask": 3,
+            "completed":0,
             "failed": 0
         },
         "tasks": [
@@ -19,7 +19,7 @@ const employees = [
                 "taskTitle": "Update website",
                 "taskDescription": "Revamp the homepage design",
                 "taskDate": "2024-10-12",
-                "category": "Design " 
+                "category": "Design "
             },
             {
                 "active": false,
@@ -51,12 +51,12 @@ const employees = [
         "taskCounts": {
             "active": 0,
             "newTask": 2,
-            "completed":0,
+            "completed": 0,
             "failed": 0
         },
         "tasks": [
             {
-                  "active": false,
+                "active": false,
                 "newTask": true,
                 "completed": false,
                 "failed": false,
@@ -90,7 +90,7 @@ const employees = [
         },
         "tasks": [
             {
-          "active": false,
+                "active": false,
                 "newTask": true,
                 "completed": false,
                 "failed": false,
@@ -100,7 +100,7 @@ const employees = [
                 "category": "Presentation"
             },
             {
-             "active": false,
+                "active": false,
                 "newTask": true,
                 "completed": false,
                 "failed": false,
@@ -110,7 +110,7 @@ const employees = [
                 "category": "Development"
             },
             {
-               "active": false,
+                "active": false,
                 "newTask": true,
                 "completed": false,
                 "failed": false,
@@ -134,7 +134,7 @@ const employees = [
         },
         "tasks": [
             {
-                  "active": false,
+                "active": false,
                 "newTask": true,
                 "completed": false,
                 "failed": false,
@@ -144,7 +144,7 @@ const employees = [
                 "category": "Documentation"
             },
             {
-                 "active": false,
+                "active": false,
                 "newTask": true,
                 "completed": false,
                 "failed": false,
@@ -178,7 +178,7 @@ const employees = [
                 "category": "Design"
             },
             {
-                 "active": false,
+                "active": false,
                 "newTask": true,
                 "completed": false,
                 "failed": false,
@@ -188,7 +188,7 @@ const employees = [
                 "category": "DevOps"
             },
             {
-                 "active": false,
+                "active": false,
                 "newTask": true,
                 "completed": false,
                 "failed": false,
@@ -204,24 +204,24 @@ const employees = [
 
 
 const admin = [
-  {
-    employee_id: "ADM001",
-    email: "admin@me.com",
-    password: "123",
-  },  
+    {
+        employee_id: "ADM001",
+        email: "admin@me.com",
+        password: "123",
+    },
 ];
 
 export const setlocalStorage = () => {
-  localStorage.setItem("employees", JSON.stringify(employees));
-  localStorage.setItem("admin", JSON.stringify(admin));
+    localStorage.setItem("employees", JSON.stringify(employees));
+    localStorage.setItem("admin", JSON.stringify(admin));
 };
 export const getlocalStorage = () => {
-  const employeeData = JSON.parse(localStorage.getItem("employees"));
-  const adminData = JSON.parse(localStorage.getItem("admin"));
-  
-// to see dataaa in console
-//   console.log("data", JSON.parse(adminData));
-//   console.log("data", JSON.parse(employeeData));
+    const employeeData = JSON.parse(localStorage.getItem("employees"));
+    const adminData = JSON.parse(localStorage.getItem("admin"));
 
-return {employeeData,adminData}
+    // to see dataaa in console
+    //   console.log("data", JSON.parse(adminData));
+    //   console.log("data", JSON.parse(employeeData));
+
+    return { employeeData, adminData }
 };
