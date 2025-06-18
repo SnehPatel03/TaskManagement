@@ -1,13 +1,13 @@
 import React, { act, useContext } from 'react'
 import { AuthContext } from '../../Context/AuthProvider';
 
-function AcceptTask({ data }) {
+function AcceptTask({ data , email }) {
 const [userData, setUserData] = useContext(AuthContext);
 const completeTaskHandler = (data) => {
    const updatedUserData = {
     ...userData,
     employeeData: userData.employeeData.map((emp) => {
-      if (emp.firstName === data.asignTo)
+      if (emp.email === email)
        {
         const updatedTasks = emp.tasks.map((task) => {
           if (task.taskTitle === data.taskTitle) {
@@ -41,7 +41,7 @@ const failedTaskHandler = (data) => {
    const updatedUserData = {
     ...userData,
     employeeData: userData.employeeData.map((emp) => {
-      if (emp.firstName === data.asignTo)
+      if (emp.email === email)
        {
         const updatedTasks = emp.tasks.map((task) => {
           if (task.taskTitle === data.taskTitle) {

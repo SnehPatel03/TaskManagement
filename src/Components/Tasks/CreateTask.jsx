@@ -25,17 +25,7 @@ const submitHandler = (e) => {
     failed: false,
     completed: false,
   };
-
-  const employeeExists = userData.employeeData.find()(
-    (emp) => emp.firstName.toLowerCase() === asignTo.trim().toLowerCase()
-  );
-
-  if (!employeeExists) {
-    alert("❌ No employee exists with the provided name.");
-    return;
-  }
-
-  const UpdatedUserData = {
+const UpdatedUserData = {
     ...userData,
     employeeData: userData.employeeData.map((emp) => {
       if (emp.firstName.toLowerCase() === asignTo.trim().toLowerCase()) {

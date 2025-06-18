@@ -2,7 +2,7 @@ const employees = [
     {
         "id": 1,
         "firstName": "Arjun",
-        "email": "e@e.com",
+        "email": "employee@1.com",
         "password": "123",
         "taskCounts": {
             "active": 2,
@@ -12,8 +12,8 @@ const employees = [
         },
         "tasks": [
             {
-                "active": true,
-                "newTask": false,
+                "active": false,
+                "newTask": true,
                 "completed": false,
                 "failed": false,
                 "taskTitle": "Update website",
@@ -23,8 +23,8 @@ const employees = [
             },
             {
                 "active": false,
-                "newTask": false,
-                "completed": true,
+                "newTask": true,
+                "completed": false,
                 "failed": false,
                 "taskTitle": "Client meeting",
                 "taskDescription": "Discuss project requirements",
@@ -32,8 +32,8 @@ const employees = [
                 "category": "Meeting"
             },
             {
-                "active": true,
-                "newTask": false,
+                "active": false,
+                "newTask": true,
                 "completed": false,
                 "failed": false,
                 "taskTitle": "Fix bugs",
@@ -46,18 +46,18 @@ const employees = [
     {
         "id": 2,
         "firstName": "Rohit",
-        "email": "employee2@example.com",
+        "email": "employee@2.com",
         "password": "123",
         "taskCounts": {
-            "active": 1,
-            "newTask": 0,
-            "completed": 1,
+            "active": 0,
+            "newTask": 2,
+            "completed":0,
             "failed": 0
         },
         "tasks": [
             {
-                "active": true,
-                "newTask": false,
+                  "active": false,
+                "newTask": true,
                 "completed": false,
                 "failed": false,
                 "taskTitle": "Database optimization",
@@ -67,8 +67,8 @@ const employees = [
             },
             {
                 "active": false,
-                "newTask": false,
-                "completed": true,
+                "newTask": true,
+                "completed": false,
                 "failed": false,
                 "taskTitle": "Design new feature",
                 "taskDescription": "Create mockups for the new feature",
@@ -80,18 +80,18 @@ const employees = [
     {
         "id": 3,
         "firstName": "Ahaana",
-        "email": "employee3@example.com",
+        "email": "employee@3.com",
         "password": "123",
         "taskCounts": {
-            "active": 2,
-            "newTask": 0,
-            "completed": 1,
+            "active": 0,
+            "newTask": 3,
+            "completed": 0,
             "failed": 0
         },
         "tasks": [
             {
-                "active": true,
-                "newTask": false,
+          "active": false,
+                "newTask": true,
                 "completed": false,
                 "failed": false,
                 "taskTitle": "Prepare presentation",
@@ -100,8 +100,8 @@ const employees = [
                 "category": "Presentation"
             },
             {
-                "active": true,
-                "newTask": false,
+             "active": false,
+                "newTask": true,
                 "completed": false,
                 "failed": false,
                 "taskTitle": "Code review",
@@ -110,9 +110,9 @@ const employees = [
                 "category": "Development"
             },
             {
-                "active": false,
-                "newTask": false,
-                "completed": true,
+               "active": false,
+                "newTask": true,
+                "completed": false,
                 "failed": false,
                 "taskTitle": "Testing",
                 "taskDescription": "Test the latest build for bugs",
@@ -124,17 +124,17 @@ const employees = [
     {
         "id": 4,
         "firstName": "Sanjivani",
-        "email": "employee4@example.com",
+        "email": "employee@4.com",
         "password": "123",
         "taskCounts": {
-            "active": 1,
-            "newTask": 1,
+            "active": 0,
+            "newTask": 2,
             "completed": 0,
             "failed": 0
         },
         "tasks": [
             {
-                "active": false,
+                  "active": false,
                 "newTask": true,
                 "completed": false,
                 "failed": false,
@@ -144,8 +144,8 @@ const employees = [
                 "category": "Documentation"
             },
             {
-                "active": true,
-                "newTask": false,
+                 "active": false,
+                "newTask": true,
                 "completed": false,
                 "failed": false,
                 "taskTitle": "Set up CI/CD",
@@ -158,18 +158,18 @@ const employees = [
     {
         "id": 5,
         "firstName": "Karan",
-        "email": "employee5@example.com",
+        "email": "employee@5.com",
         "password": "123",
         "taskCounts": {
-            "active": 2,
-            "newTask": 0,
-            "completed": 1,
+            "active": 0,
+            "newTask": 3,
+            "completed": 0,
             "failed": 0
         },
         "tasks": [
             {
-                "active": true,
-                "newTask": false,
+                "active": false,
+                "newTask": true,
                 "completed": false,
                 "failed": false,
                 "taskTitle": "UI redesign",
@@ -178,9 +178,9 @@ const employees = [
                 "category": "Design"
             },
             {
-                "active": false,
-                "newTask": false,
-                "completed": true,
+                 "active": false,
+                "newTask": true,
+                "completed": false,
                 "failed": false,
                 "taskTitle": "Deploy new build",
                 "taskDescription": "Deploy the latest build to production",
@@ -188,8 +188,8 @@ const employees = [
                 "category": "DevOps"
             },
             {
-                "active": true,
-                "newTask": false,
+                 "active": false,
+                "newTask": true,
                 "completed": false,
                 "failed": false,
                 "taskTitle": "Client feedback",

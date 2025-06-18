@@ -5,7 +5,7 @@ import Header from './../../others/Header';
 import { AuthContext } from '../../Context/AuthProvider';
 
 
-function EmployeeDashboard({ email ,changeUser }) {
+function EmployeeDashboard({ email ,  changeUser }) {
   
   const [userData,setUserData] = useContext(AuthContext);
   const currentUser = userData.employeeData.find(emp => emp.email === email);

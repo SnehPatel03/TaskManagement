@@ -5,6 +5,7 @@ import CompleteTask from "./CompleteTask";
 import FailedTask from "./FailedTask";
 
 function Tasklist({ data }) {
+  console.log(data.email)
   return (
     <div
       id="tasklist"
@@ -13,16 +14,16 @@ function Tasklist({ data }) {
       {data.tasks.map((elem, index) => {
         // console.log("elem" , elem)
         if (elem.active) {
-          return <AcceptTask data={elem} key={index} />
+          return <AcceptTask data={elem} email={data.email} key={index} />
         }
         if (elem.newTask) {
-          return <NewTask data={elem} key={index} />
+          return <NewTask data={elem} email={data.email} key={index} />
         }
         if (elem.completed) {
-          return <CompleteTask data={elem} key={index} />
+          return <CompleteTask data={elem} email={data.email} key={index} />
         }
         if (elem.failed) {
-          return <FailedTask data={elem} key={index} />
+          return <FailedTask data={elem} email={data.email} key={index} />
         }
       })}
     </div>
