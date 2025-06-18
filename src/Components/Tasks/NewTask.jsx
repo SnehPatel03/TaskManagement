@@ -1,6 +1,45 @@
-import React from 'react'
-
+import React, { useContext } from 'react'
+import AcceptTask from './AcceptTask'
+import { AuthContext } from '../../Context/AuthProvider';
 function NewTask({data}) {
+const [userData, setUserData] = useContext(AuthContext);
+
+const AcceptTaskHandler = (data) => {
+  const updatedUserData = {
+    ...userData,
+    employeeData: userData.employeeData.map((emp) => {
+      if (emp.firstName === emp.asignTo) {
+        const updatedTasks = emp.tasks.map((task) => {
+          if (task.taskTitle === data.taskTitle) {
+            return {
+              ...task,
+              active: true,
+              newTask: false,
+              failed: false,
+              completed: false,
+            };
+          }
+          return task;
+        });
+        return {
+          ...emp,
+          tasks: updatedTasks,
+          taskCounts: {
+            ...emp.taskCounts,
+            newTask: emp.taskCounts.newTask - 1,
+            active: emp.taskCounts.active + 1,
+          },
+        };
+      }
+      return emp;
+    }),
+  };
+  // console.log(updatedUserData)
+  setUserData(updatedUserData);
+
+};
+
+
   return (
       <div className="flex-shrink-0 h-full w-[310px] bg-blue-500 rounded-2xl ">
         <div className="flex justify-between items-center px-5 py-6">
@@ -10,16 +49,18 @@ function NewTask({data}) {
           <h4 className="text-sm text-white font-bold">{data.taskDate}</h4>
         </div>
         <div className=" px-6">
-          <h2 className="text-3xl font-bold text-white">
+          <h2 className="text-2xl font-bold text-white">
            {data.taskTitle}
           </h2>
-          <h4 className="text-sm text-white font-semibold mt-5">
+          <h4 className="h-[15vh] overflow-x-auto scrollbar-hide text-white font-semibold mt-5">
            {data.taskDescription}
           </h4>
-              <div className='flex justify-center gap-1 '>
-          
-          <button className='flex justify-center bg-blue-700 font-semibold  px-2 py-1 rounded-md  text-[13px]  text-white '> Accept Task </button>
-          </div>
+           <div className='flex relative justify-center gap-10  '>
+          <button  
+          onClick={() => AcceptTaskHandler(data)}
+          className='flex justify-center items-center bg-blue-700 font-semibold px-3 py-1.5 rounded-md text-[11px] text-white shadow-md transition-all duration-300 ease-in-out transform hover:bg-blue-800 hover:scale-105 hover:shadow-lg'
+          >Accept Task</button>
+          </div>  
         </div>
       </div>
   )

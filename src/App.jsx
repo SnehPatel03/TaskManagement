@@ -45,13 +45,12 @@ function App() {
       alert("Invalid user , Enter valid email and password");
     }
   };
-
+  
 
   return (
-  
      <>
       {!user ? <Login loginHandel={loginHandel} /> : ''}
-      {user == 'admin' ? <AdminDashboard changeUser={setUser} /> : (user == 'employee' ? <EmployeeDashboard changeUser={setUser} data={userLoggedInData} /> : null) }
+      {user == 'admin' ? <AdminDashboard changeUser={setUser} /> : (user == 'employee' ? <EmployeeDashboard  email={userLoggedInData.email} changeUser={setUser} /> : null) }
     </>
   );
 }

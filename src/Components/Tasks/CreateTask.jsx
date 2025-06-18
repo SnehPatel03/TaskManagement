@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { getlocalStorage } from '../../utils/localStorage';
 import { AuthContext } from '../../Context/AuthProvider';
 
+
 function CreateTask() {
   const [taskTitle, setTaskTitle] = useState("");
   const [taskDate, setTaskDate] = useState("");
@@ -25,10 +26,19 @@ const submitHandler = (e) => {
     completed: false,
   };
 
-  const updatedUserData = {
+  const employeeExists = userData.employeeData.find()(
+    (emp) => emp.firstName.toLowerCase() === asignTo.trim().toLowerCase()
+  );
+
+  if (!employeeExists) {
+    alert("❌ No employee exists with the provided name.");
+    return;
+  }
+
+  const UpdatedUserData = {
     ...userData,
     employeeData: userData.employeeData.map((emp) => {
-      if (emp.firstName === asignTo) {
+      if (emp.firstName.toLowerCase() === asignTo.trim().toLowerCase()) {
         return {
           ...emp,
           tasks: [...emp.tasks, task],
@@ -42,17 +52,15 @@ const submitHandler = (e) => {
     }),
   };
 
-  setUserData(updatedUserData);
-  console.log(updatedUserData);
+  setUserData(UpdatedUserData);
 
-  // Clear form
+ 
   setTaskTitle('');
   setCategory('');
   setAsignTo('');
   setTaskDate('');
   setTaskDescription('');
 };
-
 
   return (
     <form onSubmit={(e) => {
@@ -93,8 +101,8 @@ const submitHandler = (e) => {
             setTaskDescription(e.target.value);
           }}
           placeholder='Description of Task...' name="description" cols="70" rows="10" className='p-2 border-2 w-[34vw] rounded-md m-5 mt-5 font-semibold' ></textarea>
-        <button className='ml-55 mt-17 border-none font-bold rounded-lg h-11 w-30 px-5 
-        bg-[#2EB872] hover:bg-green-600 transition duration-300 ease-in-out'>
+        <button className='ml-55 mt-17 border-none font-bold rounded-lg h-11 w-30 px-5 >
+          bg-[#2EB872] hover:bg-green-600 transition duration-300 ease-in-out'>
           <h2 className='text-md font-semibold'>Creat Task</h2>
         </button>
       </div>

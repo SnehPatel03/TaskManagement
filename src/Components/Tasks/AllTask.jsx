@@ -4,9 +4,6 @@ import { AuthContext } from "./../../Context/AuthProvider";
 
 function AllTask() {
     const [userData, setUserData] = useContext(AuthContext);
-// const data = userData.employeeData;
-
-
 
     return (
         <div className='bg-[#1c1c1c] h-[80%] px-3 py-10  ' >
@@ -19,7 +16,7 @@ function AllTask() {
                     <h4 className='font-bold mr-5'> Failed</h4>
                 </div>
             </div>
-            {/* <div className='bg-[#1c1c1c]  p-5 rounded-mg h-48 '>
+            <div className='bg-[#1c1c1c]  p-5 rounded-mg h-48 '>
                 {userData.employeeData.map((elem, idx) => {
                         return (
                             <div key={idx} className='border-2 border-white text-white
@@ -32,7 +29,7 @@ function AllTask() {
                             </div>
                         )
                     })}
-            </div> */}
+            </div>
         </div>
     )
 }

@@ -6,20 +6,20 @@ const employees = [
         "password": "123",
         "taskCounts": {
             "active": 2,
-            "newTask": 1,
+            "newTask": 0,
             "completed": 1,
             "failed": 0
         },
         "tasks": [
             {
                 "active": true,
-                "newTask": true,
+                "newTask": false,
                 "completed": false,
                 "failed": false,
                 "taskTitle": "Update website",
                 "taskDescription": "Revamp the homepage design",
                 "taskDate": "2024-10-12",
-                "category": "Design" 
+                "category": "Design " 
             },
             {
                 "active": false,
@@ -84,14 +84,14 @@ const employees = [
         "password": "123",
         "taskCounts": {
             "active": 2,
-            "newTask": 1,
+            "newTask": 0,
             "completed": 1,
             "failed": 0
         },
         "tasks": [
             {
                 "active": true,
-                "newTask": true,
+                "newTask": false,
                 "completed": false,
                 "failed": false,
                 "taskTitle": "Prepare presentation",
@@ -127,14 +127,14 @@ const employees = [
         "email": "employee4@example.com",
         "password": "123",
         "taskCounts": {
-            "active": 2,
+            "active": 1,
             "newTask": 1,
             "completed": 0,
             "failed": 0
         },
         "tasks": [
             {
-                "active": true,
+                "active": false,
                 "newTask": true,
                 "completed": false,
                 "failed": false,
@@ -162,14 +162,14 @@ const employees = [
         "password": "123",
         "taskCounts": {
             "active": 2,
-            "newTask": 1,
+            "newTask": 0,
             "completed": 1,
             "failed": 0
         },
         "tasks": [
             {
                 "active": true,
-                "newTask": true,
+                "newTask": false,
                 "completed": false,
                 "failed": false,
                 "taskTitle": "UI redesign",
