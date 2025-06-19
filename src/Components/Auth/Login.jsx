@@ -6,19 +6,14 @@ function Login({ loginHandel }) {
   const [password, setpassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const submitHandler = async (e) => {
+  const submitHandler =  (e) => {
     e.preventDefault();
     setIsLoading(true);
 
-    try {
-      await loginHandel(email, password);
+       loginHandel(email, password);
       setemail("");
       setpassword("");
-    } catch (error) {
-      console.error("Login error:", error);
-    } finally {
-      setIsLoading(false);
-    }
+    
   };
 
   return (
@@ -44,7 +39,7 @@ function Login({ loginHandel }) {
                   required
                   value={email}
                   onChange={(e) => setemail(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-[#1c1c1c] border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
                   placeholder="Enter Your Email Here"
                 />
               </div>
@@ -62,7 +57,7 @@ function Login({ loginHandel }) {
                   required
                   value={password}
                   onChange={(e) => setpassword(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-[#1c1c1c] border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
                   placeholder="Enter Password Here"
                 />
               </div>
@@ -80,7 +75,6 @@ function Login({ loginHandel }) {
         </div>
       </div>
 
-      {/* Right Panel - Welcome Section */}
       <div className="hidden lg:flex flex-1 bg-gradient-to-br from-gray-700 via-gray-800 to-gray-900 items-center justify-center p-12">
         <div className="text-center max-w-lg">
           <h2 className="text-4xl font-bold text-white mb-4">
@@ -91,7 +85,6 @@ function Login({ loginHandel }) {
             Manage your tasks and stay productive
           </p>
 
-          {/* Simple Illustration */}
           <div className="relative">
             <div className="w-64 h-64 mx-auto bg-white bg-opacity-10 rounded-full flex items-center justify-center">
               <div className="w-32 h-40 bg-white rounded-lg shadow-lg flex flex-col p-4">

@@ -72,7 +72,7 @@ const failedTaskHandler = (data) => {
 
 }
   return (
-    <div className="flex-shrink-0 h-full w-[310px] bg-amber-600 rounded-2xl ">
+    <div className="flex-shrink-0 h-full w-[310px] 	bg-[#9C340F] rounded-2xl ">
       <div className="flex justify-between items-center px-5 py-6 relative">
         <h3 className="text-sm bg-red-600 px-3 py-1 rounded-md font-bold text-white">
           {data.category}
@@ -88,9 +88,9 @@ const failedTaskHandler = (data) => {
         </h4>
         <div className='flex justify-center'>
           <div className='flex justify-center  bottom-12   gap-3 mb-3'>
-            <button className=' flex justify-center items-center bg-emerald-700 font-semibold px-3 py-1.5 rounded-md text-[11px] text-white shadow-md transition-all duration-300 ease-in-out transform hover:bg-emerald-800 hover:scale-105 hover:shadow-lg' onClick={() => completeTaskHandler(data)}>Marked as
+            <button className=' flex justify-center items-center bg-emerald-700 font-semibold px-3 py-1.5 rounded-md text-[11px] text-white shadow-md transition-all duration-300 ease-in-out transform hover:bg-emerald-800 hover:scale-102 hover:shadow-lg' onClick={() => completeTaskHandler(data)}>Marked as
             Completed</button>
-            <button className='flex justify-center items-center bg-red-700 font-semibold px-3 py-1.5 rounded-md text-[11px] text-white shadow-md transition-all duration-300 ease-in-out transform hover:bg-red-800 hover:scale-102 hover:shadow-lg hover:tracking-wider' onClick={() => failedTaskHandler(data)}> Marked as Failed</button>
+            <button className='flex justify-center items-center bg-red-700 font-semibold px-3 py-1.5 rounded-md text-[11px] text-white shadow-md transition-all duration-300 ease-in-out transform hover:bg-red-800 hover:scale-102 hover:shadow-lg' onClick={() => failedTaskHandler(data)}> Marked as Failed</button>
           </div>
         </div>
       </div>

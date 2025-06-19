@@ -12,7 +12,7 @@ function Tasklist({ data }) {
       className="h-[50%] w-full flex flex-nowrap  items-center justify-start py-3 px-6 gap-5 overflow-x-auto scrollbar-hide"
     >
       {data.tasks.map((elem, index) => {
-        // console.log("elem" , elem)
+        
         if (elem.active) {
           return <AcceptTask data={elem} email={data.email} key={index} />
         }

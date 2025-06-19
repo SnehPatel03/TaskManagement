@@ -39,7 +39,7 @@ function NewTask({ data , email}) {
 
 
   return (
-    <div className="flex-shrink-0 h-full w-[310px] bg-blue-500 rounded-2xl ">
+    <div className="flex-shrink-0 h-full w-[310px] 	bg-[#1E3D9B] rounded-2xl ">
       <div className="flex justify-between items-center px-5 py-6">
         <h3 className="text-sm bg-red-600 px-3 py-1 rounded-md font-bold text-white">
           {data.category}
@@ -56,7 +56,7 @@ function NewTask({ data , email}) {
         <div className='flex relative justify-center gap-10  '>
           <button
             onClick={() => AcceptTaskHandler(data)}
-            className='flex justify-center items-center bg-blue-700 font-semibold px-3 py-1.5 rounded-md text-[11px] text-white shadow-md transition-all duration-300 ease-in-out transform hover:bg-blue-800 hover:scale-105 hover:shadow-lg'
+            className='flex justify-center items-center bg-blue-600 font-semibold px-3 py-1.5 rounded-md text-[11px] text-white shadow-md transition-all duration-300 ease-in-out transform hover:bg-blue-700 hover:scale-103 hover:shadow-lg'
           >Accept Task</button>
         </div>
       </div>
