@@ -41,7 +41,11 @@ function App() {
           JSON.stringify({ role: "employee" , data: employee })
         );
       }
-    } else {
+      else {
+      alert("Invalid user , Enter valid email and password");
+    }
+    }
+     else {
       alert("Invalid user , Enter valid email and password");
     }
   };

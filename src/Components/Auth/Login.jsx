@@ -4,11 +4,11 @@ import { User, Lock } from 'lucide-react';
 function Login({ loginHandel }) {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+ 
 
   const submitHandler =  (e) => {
     e.preventDefault();
-    setIsLoading(true);
+   
 
        loginHandel(email, password);
       setemail("");
@@ -18,7 +18,7 @@ function Login({ loginHandel }) {
 
   return (
     <div className="min-h-screen flex" style={{ backgroundColor: '#1c1c1c' }}>
-      {/* Left Panel - Login Form */}
+      
       <div className="flex-1 flex items-center justify-center px-8 lg:px-12">
         <div className="w-full max-w-md">
           <div className="mb-8">
@@ -27,7 +27,7 @@ function Login({ loginHandel }) {
           </div>
 
           <form onSubmit={submitHandler} className="space-y-6">
-            {/* Email Field */}
+        
             <div className="space-y-2">
               <label className="text-sm font-medium text-gray-300">Email</label>
               <div className="relative">
@@ -45,7 +45,7 @@ function Login({ loginHandel }) {
               </div>
             </div>
 
-            {/* Password Field */}
+      
             <div className="space-y-2">
               <label className="text-sm font-medium text-gray-300">Password</label>
               <div className="relative">
@@ -63,13 +63,13 @@ function Login({ loginHandel }) {
               </div>
             </div>
 
-            {/* Login Button */}
+    
             <button
               type="submit"
-              disabled={isLoading}
+            
               className="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-400 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isLoading ? 'Logging in...' : 'LOGIN'}
+             LOGIN
             </button>
           </form>
         </div>

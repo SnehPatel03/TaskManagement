@@ -39,7 +39,7 @@ function NewTask({ data , email}) {
 
 
   return (
-    <div className="flex-shrink-0 h-full w-[310px] 	bg-[#1E3D9B] rounded-2xl ">
+    <div className="flex-shrink-0  h-[80vw] md:h-full w-[310px] 	bg-[#1E3D9B] rounded-2xl ">
       <div className="flex justify-between items-center px-5 py-6">
         <h3 className="text-sm bg-red-600 px-3 py-1 rounded-md font-bold text-white">
           {data.category}

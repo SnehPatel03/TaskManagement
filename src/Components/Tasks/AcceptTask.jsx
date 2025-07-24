@@ -1,7 +1,7 @@
 import React, { act, useContext } from 'react'
 import { AuthContext } from '../../Context/AuthProvider';
 
-function AcceptTask({ data , email }) {
+function  AcceptTask({ data , email }) {
 const [userData, setUserData] = useContext(AuthContext);
 const completeTaskHandler = (data) => {
    const updatedUserData = {
@@ -72,7 +72,7 @@ const failedTaskHandler = (data) => {
 
 }
   return (
-    <div className="flex-shrink-0 h-full w-[310px] 	bg-[#9C340F] rounded-2xl ">
+    <div className="flex-shrink-0 h-[80vw] md:h-full w-[310px] 	bg-[#9C340F] rounded-2xl ">
       <div className="flex justify-between items-center px-5 py-6 relative">
         <h3 className="text-sm bg-red-600 px-3 py-1 rounded-md font-bold text-white">
           {data.category}

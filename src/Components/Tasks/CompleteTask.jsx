@@ -2,7 +2,7 @@ import React from 'react'
 
 function CompleteTask({ data }) {
   return (
-    <div className="relative group flex-shrink-0 h-full w-[310px] bg-[#065647] rounded-2xl overflow-hidden transition-all duration-300">
+    <div className="relative group flex-shrink-0 h-[80vw] md:h-full w-[310px] bg-[#065647] rounded-2xl overflow-hidden transition-all duration-300">
 
       <div className="relative z-10">
         <div className="flex justify-between items-center px-5 py-6">
