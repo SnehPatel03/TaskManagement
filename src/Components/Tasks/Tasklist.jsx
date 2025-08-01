@@ -10,7 +10,7 @@ function Tasklist({ data }) {
     <>
       <div
         id="tasklist"
-        className=" h-[50%] w-[89vw] flex flex-nowrap  items-center justify-start py-3 px-6 gap-5 overflow-x-auto scrollbar-hide mt-[70vw] -ml-1 md:mt-0 md:ml-0"
+        className=" h-[50%] w-[89vw] flex flex-nowrap  items-center justify-start py-3 px-6 gap-5 overflow-x-auto scrollbar-hide mt-[20vw] -ml-1 md:mt-0 md:ml-0"
       >
         {data.tasks.map((elem, index) => {
 

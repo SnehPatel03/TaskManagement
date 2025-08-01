@@ -11,7 +11,7 @@ function EmployeeDashboard({ email ,  changeUser }) {
   const currentUser = userData.employeeData.find(emp => emp.email === email);
  
   return (
-    <div className="h-screen w-full bg-[#1c1c1c] py-8 px-4 ">
+    <div className="md:h-[100vh] h-[180vh] w-full bg-[#1c1c1c] py-8 px-4 ">
       <Header data={currentUser} changeUser={changeUser} />
       <TaskBar data={currentUser} />
       <Tasklist data={currentUser} />
