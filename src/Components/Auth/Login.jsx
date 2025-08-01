@@ -22,14 +22,14 @@ function Login({ loginHandel }) {
       <div className="flex-1 flex items-center justify-center px-8 lg:px-12 mb-70 md:mb-0">
         <div className="w-full max-w-md">
           <div className="mb-8">
-            <h1 className="text-3xl font-bold text-white mb-2">LOGIN</h1>
+            {/* <h1 className="text-3xl font-bold text-white mb-2">LOGIN</h1> */}
             <p className="text-gray-400">Enter your account details</p>
           </div>
 
           <form onSubmit={submitHandler} className="space-y-6">
         
             <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-300">Email</label>
+              {/* <label className="text-sm font-medium text-gray-300">Email</label> */}
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center">
                   <User className="h-5 w-5 text-gray-500" />
