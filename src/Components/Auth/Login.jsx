@@ -17,9 +17,9 @@ function Login({ loginHandel }) {
   };
 
   return (
-    <div className="min-h-screen flex" style={{ backgroundColor: '#1c1c1c' }}>
+    <div className="min-h-screen flex " style={{ backgroundColor: '#1c1c1c' }}>
       
-      <div className="flex-1 flex items-center justify-center px-8 lg:px-12">
+      <div className="flex-1 flex items-center justify-center px-8 lg:px-12 mb-70 md:mb-0">
         <div className="w-full max-w-md">
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-white mb-2">LOGIN</h1>

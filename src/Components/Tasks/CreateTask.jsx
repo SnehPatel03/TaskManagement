@@ -89,7 +89,7 @@ const UpdatedUserData = {
             setTaskDescription(e.target.value);
           }}
           placeholder='Description of Task...' name="description" cols="70" rows="10" className='p-2 border-2 w-[70vw] rounded-md m-5 mt-5 font-semibold sm:w-[38vw]' ></textarea>
-        <button className='ml-25 mt-10 border-none font-bold rounded-lg h-11 w-30 px-5 >
+        <button className='ml-25 mt-10 border-none text-sm font-bold rounded-lg h-11 w-30 px-5 >
           bg-[#2EB872] sm:px-2 hover:bg-green-600 transition duration-300 ease-in-out'>
           <h2 className='text-md font-semibold'>Create Task</h2>
         </button>
